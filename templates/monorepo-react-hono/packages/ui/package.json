@@ -1,0 +1,34 @@
+{
+  "name": "@workspace/ui",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    "./globals.css": "./src/styles/globals.css",
+    "./postcss.config": "./postcss.config.mjs",
+    "./lib/*": "./src/lib/*.ts",
+    "./components/*": "./src/components/*.tsx",
+    "./hooks/*": "./src/hooks/*.ts"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules"
+  },
+  "dependencies": {
+    "@radix-ui/react-label": "catalog:",
+    "@radix-ui/react-slot": "catalog:",
+    "class-variance-authority": "catalog:",
+    "clsx": "catalog:",
+    "lucide-react": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "tailwind-merge": "catalog:",
+    "tw-animate-css": "catalog:"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@workspace/typescript-config": "workspace:*",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "monorepo",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "clean": "pnpm -r --parallel clean && rm -rf node_modules"
+  }
+}

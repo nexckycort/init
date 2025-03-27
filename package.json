@@ -1,0 +1,43 @@
+{
+  "name": "@nexckycort/create-init",
+  "version": "0.0.4",
+  "author": "nexckycort <nexckycort@gmail.com>",
+  "description": "A personal CLI tool to quickly scaffold projects with predefined templates like monorepos, React, Solid, backend, and lambdas.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nexckycort/init.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "bin": {
+    "create-init": "bin.js"
+  },
+  "files": ["templates", "dist", "bin.js"],
+  "scripts": {
+    "build": "rslib build",
+    "check": "biome check --write",
+    "dev": "rslib build --watch",
+    "start": "node ./dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "kolorist": "^1.8.0",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@rslib/core": "^0.5.5",
+    "@tsconfig/node22": "^22.0.1",
+    "@types/node": "^22.13.13",
+    "@types/prompts": "^2.4.9"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true,
+    "registry": "https://registry.npmjs.org/"
+  }
+}

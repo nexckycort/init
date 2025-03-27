@@ -1,0 +1,18 @@
+model user {
+    id         String    @id @default(cuid()) @map("id")
+    email      String    @unique @map("email")
+    password   String    @map("password")
+    name       String?   @map("name")
+    role       user_role @default(USER) @map("role")
+    created_at DateTime  @default(now()) @map("created_at")
+    updated_at DateTime  @updatedAt @map("updated_at")
+
+    @@map("user")
+}
+
+enum user_role {
+    USER
+    ADMIN
+
+    @@map("user_role")
+}

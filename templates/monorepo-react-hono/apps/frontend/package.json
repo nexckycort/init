@@ -1,0 +1,31 @@
+{
+  "name": "@workspace/frontend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "rsbuild build",
+    "build:rsdoctor": "RSDOCTOR=true pnpm build",
+    "check": "biome check --write",
+    "clean": "rm -rf node_modules && rm -rf dist",
+    "dev": "rsbuild dev --open",
+    "preview": "rsbuild preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "catalog:",
+    "@workspace/backend": "workspace:*",
+    "@workspace/ui": "workspace:*",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "catalog:",
+    "@rsbuild/plugin-react": "catalog:",
+    "@rsdoctor/rspack-plugin": "catalog:",
+    "@tanstack/router-plugin": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "typescript": "catalog:"
+  }
+}

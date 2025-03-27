@@ -1,0 +1,37 @@
+{
+  "name": "@workspace/backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./hc": {
+      "import": {
+        "default": "./dist/hc.js",
+        "types": "./dist/hc.d.ts"
+      }
+    }
+  },
+  "scripts": {
+    "build:hc": "tsc -p tsconfig.build.json",
+    "check": "biome check --write",
+    "clean": "rm -rf node_modules && rm -rf dist",
+    "dev": "bun run --env-file=.env --hot src/main.ts",
+    "postinstall": "pnpm build:hc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "catalog:",
+    "@prisma/client": "catalog:",
+    "@prisma/extension-accelerate": "catalog:",
+    "hono": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "catalog:",
+    "@types/bun": "latest",
+    "@types/node": "catalog:",
+    "@workspace/typescript-config": "workspace:*",
+    "prisma": "catalog:",
+    "typescript": "catalog:"
+  }
+}
